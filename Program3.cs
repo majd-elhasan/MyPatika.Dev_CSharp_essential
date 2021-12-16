@@ -1,7 +1,7 @@
 ﻿using System;
 namespace operatorler
 {
-    class program
+    class program3
     {
         static void Main(string[] args)
         {
