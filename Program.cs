@@ -1,46 +1,58 @@
 ﻿using System;
-namespace Variables
+namespace operatorler
 {
-    class Program
+    class program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello world");
-            Console.WriteLine("");
-            int i = 5;
-            uint ui = 4000000000u;
-            double d = 3.2d;
-            float f = 1.6f;
-            decimal dec = 51234567891234567891234567893.54000m;
+            // atama ve işlamli atama işlemleri 
+            Console.WriteLine("*****atama ve işlemli atama işlemleri*****");
 
-            short sh = -20598;
-            ushort ush = 40000;
-            byte b1 = 210;
-            sbyte sb1 = -100;
-
-            long l1 = -1234567890123456789l;
-            ulong ul1 = 12345678901234567890ul;
-
-            char ch = '5';
-            bool bool1 = true;
-            string str1 = "27";
-
-            object obje1= "Patika.dev";
-            object obje2 = 10;
-            object obje3 = "numara !";
-
+            int x = 1;
+            int y = 2;
+            y = x++;
+            Console.WriteLine("y = " + y);
+            y = x++;
+            Console.WriteLine("y = " + y);
+            y += x;
+            Console.WriteLine("y = " + y);
+            x *= y;
+            Console.WriteLine("x = " + x);
             
-            string str = "the life is good when we live it true !";
-            Console.WriteLine(Convert.ToInt32(str1)+i);
+            // Aritmetik işlemler
+            Console.WriteLine("*****Aritmetik işlemler*****");
+            y = x%2;
+            Console.WriteLine("y = " + y);
+            y = x/5;
+            Console.WriteLine("y = " + y);
+            double z  = Math.Pow(x,2);
+            Console.WriteLine("z = " + z);
+            z = Math.Pow(x%2 +x/5 , 2);
+            Console.WriteLine("z = " + z);
 
-            DateTime d_today = DateTime.Today;
-            Console.WriteLine(DateTime.Now.ToString("dd.MM.yyyy"));
-            Console.WriteLine(DateTime.Now.ToString("HH:mm:ss"));
-            Console.WriteLine(obje1);
-            Console.WriteLine(obje2);
-            Console.WriteLine(obje3);
+            // Mantıksal işlemler
+            Console.WriteLine("*****Mantıksal işlemler*****");
+            bool b1 = x>10 && z> 10;
+            Console.WriteLine("b1 is " + b1);
+            bool b2 = !b1;
+            Console.WriteLine("b2 is " + b2);
 
-            
+            // ilişkisel operatörler
+            Console.WriteLine("*****ilişkisel operatörler*****");
+            bool b5 = z>x;
+            Console.WriteLine("b5 is " + b5);
+             x++;
+            Console.WriteLine("The variable x was increased 1 !");
+             Console.WriteLine(x);
+             Console.WriteLine(z);
+             Console.WriteLine("b5 is " + b5);
+            bool b6 = z/2 >x;
+            Console.WriteLine("b6 is " +b6);
+            bool b7 = z>0;
+            Console.WriteLine("b7 is " +b7);
+            z = -2;
+            b7 = z>0;
+            Console.WriteLine("b7 is " +b7);
         }
     }
 }
