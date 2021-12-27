@@ -1,5 +1,5 @@
 ﻿using System;
- namespace Koleksiyonlar_Soru_1
+ namespace Koleksiyonlar_Soru_3
  {
      class Program
      {
